@@ -56,7 +56,7 @@ class AuthController extends Controller
 
         $adminData = [
             'firstname' => $request->get('firstname'),
-            'lastname' => $request->get('lastname'),
+            'lastname' => $request->get('lastname'), 
             'email' => $request->get('email'),
             'phone' =>  $request->get('phone'),
             'password' => Hash::make($request->get('password')),
