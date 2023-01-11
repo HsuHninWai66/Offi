@@ -29,3 +29,11 @@
     <!-- Custom Theme Style -->
     <link href="{!! asset('assets/admin//build/css/custom.min.css') !!}" rel="stylesheet">
   </head>
+
+  {{-- Common Css --}}
+  <style>
+    .text-gradiant {
+      background-image: -webkit-linear-gradient(45deg,#9c7efe,#faaca8) !important;
+      text-shadow:none;-webkit-background-clip: text;-webkit-text-fill-color: transparent;
+    }
+  </style>

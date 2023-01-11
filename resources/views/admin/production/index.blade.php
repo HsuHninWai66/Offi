@@ -6,7 +6,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-bar-chart-o" style="background-image: -webkit-linear-gradient(45deg,#9c7efe,#faaca8);text-shadow:none;-webkit-background-clip: text;-webkit-text-fill-color: transparent;"></i> <span style="background-image: -webkit-linear-gradient(45deg,#9c7efe,#faaca8);text-shadow:none;-webkit-background-clip: text;-webkit-text-fill-color: transparent;">OFFICE!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw text-gradiant"></i> <span class="text-gradiant">OFFICE!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -17,8 +17,8 @@
                 <img src="images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>Admin</h2>
+                <span class="text-gradiant">Welcome,</span>
+                <h2 style="color: #343a78;">{{ $adminData['firstname'] }}{{ $adminData['lastname'] }}</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -45,7 +45,7 @@
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">Admin
+                    <img src="images/img.jpg" alt="">{{ $adminData['firstname']}} {{$adminData['lastname'] }}
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"  href="javascript:;"> Profile</a>
@@ -54,7 +54,7 @@
                         <span>Settings</span>
                       </a>
                   <a class="dropdown-item"  href="javascript:;">Help</a>
-                    <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    <a class="dropdown-item"  href="{{ url('logout') }}"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                   </div>
                 </li>
 

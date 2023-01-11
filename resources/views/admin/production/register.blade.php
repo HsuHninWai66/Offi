@@ -13,22 +13,22 @@
             
               <div>
                 @error('firstname')<span class="error text-danger text-left d-block">{{$message}}</span>@enderror
-                <input type="text" name="firstname" class="form-control @error('firstname') parsley-error border border-danger @enderror" placeholder="First Name"/>
+                <input type="text" name="firstname" class="form-control @error('firstname') parsley-error border border-danger @enderror" placeholder="First Name" value="{{ old('firstname') }}"/>
               </div>
               
               <div>
                 @error('lastname')<span class="error text-danger text-left d-block">{{$message}}</span>@enderror
-                <input type="text" name="lastname" class="form-control @error('lastname') parsley-error border border-danger @enderror" placeholder="Last Name" />
+                <input type="text" name="lastname" class="form-control @error('lastname') parsley-error border border-danger @enderror" placeholder="Last Name" value="{{ old('lastname') }}" />
               </div>
 
               <div>
                 @error('email')<span class="error text-danger text-left d-block">{{$message}}</span>@enderror
-                <input type="email" name="email" class="form-control @error('email') parsley-error border border-danger @enderror" placeholder="Email" />
+                <input type="email" name="email" class="form-control @error('email') parsley-error border border-danger @enderror" placeholder="Email" value="{{ old('email') }}" />
               </div>
 
               <div>
                 @error('phone')<span class="error text-danger text-left d-block">{{$message}}</span>@enderror
-                <input type="text" name="phone" class="form-control @error('phone') parsley-error border border-danger @enderror" placeholder="Phone Number" />
+                <input type="text" name="phone" class="form-control @error('phone') parsley-error border border-danger @enderror" placeholder="Phone Number" value="{{ old('phone') }}"/>
               </div>
 
               <div>

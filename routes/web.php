@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth;
+use App\Http\Controllers\Admin;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,15 +14,16 @@ use App\Http\Controllers\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('admin\production\login');
-});
 
-Route::get('index', [UserController::class, 'index']);
-
+Route::get('index', [Auth\AuthController::class, 'index'])->name('index');
+Route::get('/', [Auth\AuthController::class, 'index'])->name('/');
 
 // Login Pages
-Route::get('login', [Auth\AuthController::class, 'login'])->name('login');
+Route::get('login', [Auth\AuthController::class, 'login']);
+Route::any('login-user', [Auth\AuthController::class, 'loginUser'])->name('login-user');
+Route::get('logout', [Auth\AuthController::class, 'logout']);
+Route::get('dashboard', [Auth\AuthController::class, 'dashboard'])->name('dashboard');
+
 
 // Register Pages
 Route::get('register', [Auth\AuthController::class, 'showRegister'])->name('register');

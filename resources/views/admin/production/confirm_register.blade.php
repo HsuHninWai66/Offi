@@ -35,6 +35,7 @@
 
               <div class="separator">
                   <input type="submit" value="Confirm" style="width:150px;">
+                  <input type="button" value="Back" style="width:150px;display: block;margin: 10px auto;background-image: none;padding: 5px;border: 2px solid #d5d5d5;" onclick="history.go(-1)">
                   <p class="change_link" style="padding: 10px;"><a href="{{ url('login') }}">Already a member?</a>
                 </p>
 
